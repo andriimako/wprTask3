@@ -1,0 +1,33 @@
+﻿@model List<Student>
+
+<h1>Students</h1>
+<a href="/students/create" class="waves-effect waves-light btn">Add student</a>
+<form>
+    Search: <input type="text" id="query" name="query" style="color: #fff" />
+    <button type="submit" class="btn">Search</button>
+</form>
+<table style="color: #fff" class="striped">
+    <thead>
+        <tr>
+            <th><form>IdStudent</form></th>
+            <th>First name</th>
+            <th>Last name</th>
+            @* <th>Email</th> *@
+            @* <th>Address</th> *@
+            @* <th>Index number</th> *@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var st in Model)
+        {
+            <tr>
+                <td>@st.IdStudent</td>
+                <td>@st.FirstName</td>
+                <td>@st.LastName</td>
+                @* <td>@st.Email</td> *@
+                @* <td>@st.Address</td> *@
+                @* <td>@st.IndexNumber</td> *@
+            </tr>
+        }
+    </tbody>
+</table>
